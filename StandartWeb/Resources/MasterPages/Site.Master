@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StandartWeb.Resources.MasterPages.Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register assembly="DevExpress.Web.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxMenu" tagprefix="dx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="cphTitle" runat="server">
+            Standart Web Sitesi Altyapısı</asp:ContentPlaceHolder>
+    </title>
+    <link href="~/resources/css/Global.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/resources/css/ui-lightness/jquery-ui-1.8.2.custom.css" rel="stylesheet"
+        type="text/css" runat="server" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" CombineScripts="true"
+        ScriptMode="Auto">
+        <Scripts>
+            <asp:ScriptReference Path="~/Resources/js/jquery-1.4.2.min.js" />
+            <asp:ScriptReference Path="~/Resources/js/jquery-ui-1.8.2.custom.min.js" />
+            <asp:ScriptReference Path="~/Resources/js/jquery.tools.min.js" />
+            <asp:ScriptReference Path="~/Resources/js/global.js" />
+        </Scripts>
+    </asp:ToolkitScriptManager>
+    <div id="dContainer">
+        <div id="dHeader">
+        </div>
+        <div id="dTopMenu">
+            <div id="dMainMenu">
+                <asp:ContentPlaceHolder ID="cphMainMenu" runat="server">
+                    <%--<asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+                        Orientation="Horizontal">
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                        ShowStartingNode="False" />--%>
+                </asp:ContentPlaceHolder>
+                <dx:ASPxMenu ID="ASPxMenu1" runat="server" AutoSeparators="RootOnly" 
+                    CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+                    DataSourceID="SiteMapDataSource1" 
+                    SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css">
+                    <ItemStyle DropDownButtonSpacing="13px" />
+                    <ItemSubMenuOffset FirstItemY="-1" LastItemY="-1" Y="-1" />
+                    <LoadingPanelImage Url="~/App_Themes/PlasticBlue/Web/Loading.gif">
+                    </LoadingPanelImage>
+                    <RootItemSubMenuOffset FirstItemX="1" LastItemX="1" X="1" />
+                    <SubMenuStyle GutterWidth="0px" />
+                </dx:ASPxMenu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                    ShowStartingNode="False" />
+            </div>
+            <div id="dUserInfo">
+                <asp:LoginName runat="server" FormatString="Merhaba {0}, " />
+                <asp:LoginStatus runat="server" LoginText="Giriş" LogoutText="Çıkış" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="dBody">
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                <div id="dBodyLeft">
+                    <asp:ContentPlaceHolder ID="cphContentLeft" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="dBodyRight">
+                    <asp:ContentPlaceHolder ID="cphContentRight" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear">
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="dFooter">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

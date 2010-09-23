@@ -1,0 +1,117 @@
+﻿/* reset Css */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td
+{
+    margin: 0;
+    padding: 0;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img
+{
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var
+{
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul
+{
+    list-style: none;
+}
+caption, th
+{
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before, q:after
+{
+    content: '';
+}
+abbr, acronym
+{
+    border: 0;
+}
+/* end of reset css */
+
+.clear
+{
+    clear: both;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+
+#dContainer
+{
+    width: 950px;
+    margin: 0 auto;
+}
+
+#dContainer #dHeader
+{
+    width: 950px;
+    height: 75px;
+    background: #dfdfdf;
+    color: Blue;
+}
+#dContainer #dTopMenu
+{
+    width: 950px;
+    height: 25px;
+    background: #bfbfaf;
+    color: Blue;
+}
+#dContainer #dTopMenu #dMainMenu
+{
+    float: left;
+    width: 745px;
+    height: 25px;
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+#dContainer #dTopMenu #dUserInfo
+{
+    float: left;
+    width: 195px;
+    height: 19px;
+    text-align: right;
+    padding: 3px 5px 3px 0;
+}
+#dContainer #dBody
+{
+    width: 950px;
+    min-height: 300px;
+    background: #efefef;
+    color: Black;
+}
+
+#dContainer #dBody #dBodyLeft
+{
+    float: left;
+    width: 220px;
+    min-height: 300px;
+    text-align: left;
+    background: #afafbf;
+}
+#dContainer #dBody #dBodyRight
+{
+    float: left;
+    width: 730px;
+    min-height: 300px;
+    text-align: left;
+}
+#dContainer #dFooter
+{
+    width: 950px;
+    height: 45px;
+    background: #dfdfdf;
+    color: Blue;
+}
