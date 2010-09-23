@@ -1,0 +1,4 @@
+Derste Yaptýðýmýz standart web uygulamasý örneðini içerir.
+
+Veri tabaný app_data dizini içerisinde yedek alýnmýþ olarak durmaktadýr.
+Bu yedek dosyasý Sql Server 2008 ile hazýrlanmýþtýr.
