@@ -27,7 +27,7 @@
         <classShapeMoniker Id="99f8eff8-90aa-42b4-8616-24d1b0f529d1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.45894490559896); (3.5 : 4.45894490559896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.45894490559896); (3.5 : 4.45894490559896)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/StandartWebDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
       <nodes>
         <classShapeMoniker Id="f81596a2-b2a5-4e58-a18b-e91fea1264e6" />

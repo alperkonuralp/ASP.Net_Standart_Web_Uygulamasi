@@ -10,7 +10,8 @@
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True"
         AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="LinqDataSource1">
         <Columns>
-            <asp:CommandField ShowSelectButton="True" />
+            <asp:HyperLinkField DataNavigateUrlFields="UserId" 
+                DataNavigateUrlFormatString="Details.aspx?uid={0}" Text="Detaylar" />
             <asp:TemplateField HeaderText="Üye Adı">
                 <ItemTemplate>
                     <asp:HiddenField ID="hfUserID" runat="server" Value='<%# Eval("UserID") %>' />
